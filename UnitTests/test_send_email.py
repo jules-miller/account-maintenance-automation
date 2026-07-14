@@ -85,7 +85,7 @@ class TestSendEmail(unittest.TestCase):
 
 	# _SendAll should raise a TimeoutError
 	# mock the smtpServer class var with an new value to force the Timeout exception
-	@patch.object(SendEmail, "smtpServer", "10.252.236.202") # patch with a valid server that is NOT a smtp server
+	@patch.object(SendEmail, "smtpServer", "0.0.0.0") # patch with a valid server that is NOT a smtp server
 	def test_SendAllConErr(self):
 		instance = SendEmail(testLogger, 'Unit Test', timeout=5, notifyDay=76, removalDay=90)
 		instance.recipients = validRecipients
