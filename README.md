@@ -5,6 +5,8 @@
 This is an account maintenance application that covers all BigFix componenents (WR, BFC, BFI, and Console).  
 These app is designed to run as a service and automate the full account maintenance process in a mult-server and multi-component environment.
 
+**NOTE: Some components have been partially redacted. This is for portfolio purposes only.**
+
 #### It features the following:
 	- User notifications (inactivity threshold configurable)
 	- Option to exclude a subset of users
