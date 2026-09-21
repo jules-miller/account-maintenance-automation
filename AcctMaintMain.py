@@ -17,22 +17,22 @@ import itertools
 import time
 
 # Append the Classes directory to Python's path so that it can find the module imports
-sys.path.append(os.path.join(os.path.dirname(__file__), 'Classes/'))
+#sys.path.append(os.path.join(os.path.dirname(__file__), 'Classes/'))
 
-from log_config import LogConfig
-from startup_args import StartupArgs
-from settings_config import SettingsConfig
-from pre_exec import PreExec
-from signal_handlers import SignalHanders
-from validation import Validation
-from utilities import Utilities
-from sql_config import SqlConfig
-from send_email import SendEmail
-from filter_data import FilterData
-from db_connect import DBConnect
-from db_query import DBQuery
-from db_write import DBWrite
-from ad_write import ADWrite
+from src.log_config import LogConfig
+from src.startup_args import StartupArgs
+from src.settings_config import SettingsConfig
+from src.pre_exec import PreExec
+from src.signal_handlers import SignalHanders
+from src.validation import Validation
+from src.utilities import Utilities
+from src.sql_config import SqlConfig
+from src.send_email import SendEmail
+from src.filter_data import FilterData
+from src.db_connect import DBConnect
+from src.db_query import DBQuery
+from src.db_write import DBWrite
+from src.ad_write import ADWrite
 
 ########
 appVersion = 1.6
