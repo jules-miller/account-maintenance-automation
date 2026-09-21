@@ -148,7 +148,7 @@ class TestValidation(unittest.TestCase):
 
 	def test_ValidateFQDNValid(self):
 		""" Uses a value that contains only valid server FQDNs """
-		value = 'server1.vha.med.domain,server2.vha.med.domain,server3.vha.med.domain'
+		value = 'server1.domain.domain,server2.domain.domain,server3.domain.domain'
 		defaultValue = ''
 		expectedResult = list(value)
 		result = Validation.ValidateFQDN(validationLogger, field='test1', value=value, defaultValue=defaultValue)
@@ -156,9 +156,9 @@ class TestValidation(unittest.TestCase):
 
 	def test_ValidateFQDNRem(self):
 		""" Uses a value that contains valid and invalid server FQDNs resulting in the invalid entries being removed from the final list"""
-		value = 'server1.vha.med.domain,server2.invalid.domain,server3.vha.med.domain'
+		value = 'server1.domain.domain,server2.invalid.domain,server3.domain.domain'
 		defaultValue = ''
-		expectedResult = ['server1.vha.med.domain', 'server3.vha.med.domain']
+		expectedResult = ['server1.domain.domain', 'server3.domain.domain']
 		result = Validation.ValidateFQDN(validationLogger, field='test1', value=value, defaultValue=defaultValue)
 		self.assertTrue(result, expectedResult)
 
